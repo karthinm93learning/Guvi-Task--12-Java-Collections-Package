@@ -1,0 +1,167 @@
+Program- 1
+=============================================================================================
+package com.example.hr;
+
+public class Employee {
+	
+	String emp_Name;
+	int emp_Id;
+	double emp_Salary;
+	
+	public Employee(String emp_Name, int emp_Id,int emp_Salary)
+	{
+		this.emp_Name = emp_Name;
+		this.emp_Id = emp_Id;
+		this.emp_Salary = emp_Salary;
+	}
+	
+	public void printName()
+	{
+		System.out.println("Name of the Employee : " + emp_Name);
+		
+	}
+
+	public void printSalary()
+	{
+		System.out.println("Salary of the Employee : " + emp_Salary);
+		
+	}
+}
+=============================================================================================
+package com.example.hrtest;
+import com.example.hr.*;
+
+public class EmployeeTest extends Employee{
+
+	public EmployeeTest(String emp_Name, int emp_Id, int emp_Salary) {
+		super(emp_Name, emp_Id, emp_Salary);
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		
+		EmployeeTest obj = new EmployeeTest("Karthi", 1021001, 30000);
+		
+		obj.printName();
+		obj.printSalary();
+
+}
+}
+=============================================================================================
+Output:
+
+Name of the Employee : Karthi
+Salary of the Employee : 30000.0
+=============================================================================================
+Program- 2
+=============================================================================================
+package com.guvi.Task12;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListProgram {
+
+	public static void main(String[] args) {
+		
+		List <String> listobj = new ArrayList <String>();
+
+		listobj.add("Guvi");
+		listobj.add("Automation");
+		listobj.add("Testing");
+		listobj.add("Selenium");
+		listobj.add("JAVA");
+		
+		System.out.println(listobj); // It will print with data in the ArrayList
+		
+		listobj.clear();// It will Clear data in the ArrayList
+		
+		System.out.println(listobj); // It will print Empty ArrayList after Clearing
+	}
+}
+=============================================================================================
+Output:
+
+[Guvi, Automation, Testing, Selenium, JAVA]
+[]
+
+=============================================================================================
+Program- 3
+=============================================================================================
+package com.guvi.Task12;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class TreeMap {
+
+	public static void main(String[] args) {
+		
+		Map<String, String> mapobj = new HashMap<String, String>();
+		
+		mapobj.put("1", "Karthi");
+		mapobj.put("5", "Raju");
+		mapobj.put("4", "Arun");
+		mapobj.put("3", "Banu");
+		mapobj.put("2", "Abi");
+		
+		System.out.println(mapobj); // Print Map Order
+	
+		List<String> listobj = new ArrayList<String>();
+		
+		for(Map.Entry<String, String>temp : mapobj.entrySet())
+		{
+			listobj.add(temp.getValue());
+		}
+		
+		Collections.sort(listobj);
+		System.out.println(listobj); // Printing after sorted order
+	}
+
+}
+
+=============================================================================================
+Output:
+
+{1=Karthi, 2=Abi, 3=Banu, 4=Arun, 5=Raju}
+[Abi, Arun, Banu, Karthi, Raju]
+
+=============================================================================================
+Program- 4
+=============================================================================================
+package com.guvi.Task12;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListToArray {
+
+	public static void main(String[] args) {
+
+		List<Integer> listobj = new ArrayList<Integer>();
+		
+		listobj.add(5);
+		listobj.add(10);
+		listobj.add(15);
+		listobj.add(20);
+		listobj.add(25);
+		
+		System.out.println(listobj);
+		
+		Object arr[] = new Object[listobj.size()]; //Array Deceleration
+		
+		arr=listobj.toArray(); // Converting List to Array
+		
+		System.out.println(arr[2]); //Printing array of Index
+	}
+
+}
+=============================================================================================
+Output:
+
+[5, 10, 15, 20, 25]
+15
+=============================================================================================
